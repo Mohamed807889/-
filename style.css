@@ -1,27 +1,150 @@
+/* ------------------------
+   Général
+-------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ------------------------
+   Container
+-------------------------*/
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ------------------------
+   Header
+-------------------------*/
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* ------------------------
+   Navigation
+-------------------------*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #388e3c;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2e7d32;
+}
+
+/* ------------------------
+   Sections
+-------------------------*/
+section {
+    background-color: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* ------------------------
+   Boutons PDF
+-------------------------*/
 .btn-pdf,
 .btn-download {
     display: inline-block;
-    margin: 10px 10px 0 0;
     padding: 10px 20px;
-    color: white;
-    border-radius: 4px;
+    margin-top: 10px;
     text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s ease-in-out;
     font-weight: bold;
-    transition: background 0.3s ease;
 }
 
 .btn-pdf {
-    background-color: #005599;
-}
-
-.btn-pdf:hover {
-    background-color: #003f77;
+    background-color: #4CAF50;
 }
 
 .btn-download {
-    background-color: #cc0000;
+    background-color: #2196F3;
 }
 
+.btn-pdf:hover,
 .btn-download:hover {
-    background-color: #a30000;
+    background-color: #333;
+}
+
+/* ------------------------
+   Footer
+-------------------------*/
+footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ------------------------
+   Responsive Design
+-------------------------*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    iframe {
+        height: 300px;
+    }
 }
