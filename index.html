@@ -1,16 +1,197 @@
-<section id="pdf">
-    <h2>Document PDF à consulter</h2>
-    <p>Vous pouvez lire ou télécharger ce document :</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MathPro – Cours et Ressources</title>
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Affichage du PDF -->
-    <iframe src="documents/ee.pdf" width="100%" height="500px" style="border: 1px solid #ccc;">
-        Votre navigateur ne prend pas en charge l'affichage PDF. 
-        <a href="documents/ee.pdf" target="_blank">Cliquez ici pour l’ouvrir</a>.
-    </iframe>
+  <style>
+    :root {
+      --primary: #3776ab;
+      --secondary: #f0f0f0;
+      --accent: #4caf50;
+      --text: #333;
+      --white: #fff;
+    }
 
-    <!-- Boutons -->
-    <div style="margin-top: 15px;">
-        <a href="documents/ee.pdf" target="_blank" class="btn-pdf">📄 Lire le PDF</a>
-        <a href="documents/ee.pdf" download class="btn-download">⬇️ Télécharger le PDF</a>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--secondary);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      background-color: #2a6093;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 15px 0;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background-color: #1f456c;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      background: var(--white);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 15px;
+      color: var(--white);
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-pdf {
+      background-color: var(--accent);
+    }
+
+    .btn-download {
+      background-color: #2196f3;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    iframe {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      height: 500px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin: 0;
+      }
+
+      .btn {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>📘 MathPro</h1>
+      <p>Des ressources de mathématiques pour tous les niveaux</p>
     </div>
-</section>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#pdf">Cours PDF</a></li>
+        <li><a href="#exercices">Exercices</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="accueil">
+      <h2>Bienvenue sur MathPro</h2>
+      <p>Explorez des cours complets, des fiches de révision, des exercices corrigés et des outils interactifs pour progresser efficacement en mathématiques.</p>
+    </section>
+
+    <section id="pdf">
+      <h2>Cours PDF</h2>
+      <p>Consultez ou téléchargez notre cours au format PDF :</p>
+
+      <iframe src="documents/ee.pdf"></iframe>
+
+      <div>
+        <a href="documents/ee.pdf" target="_blank" class="btn btn-pdf">📄 Lire le PDF</a>
+        <a href="documents/ee.pdf" download class="btn btn-download">⬇️ Télécharger le PDF</a>
+      </div>
+    </section>
+
+    <section id="exercices">
+      <h2>Exercices corrigés</h2>
+      <ul>
+        <li><strong>Collège :</strong> fractions, proportionnalité, calcul littéral...</li>
+        <li><strong>Lycée :</strong> fonctions, suites, statistiques...</li>
+        <li><strong>Supérieur :</strong> analyse, algèbre linéaire...</li>
+      </ul>
+    </section>
+
+    <section id="apropos">
+      <h2>À propos</h2>
+      <p>MathPro est un site éducatif conçu par des enseignants passionnés pour rendre les mathématiques claires, accessibles et agréables pour tous.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Une question ? Une remarque ? Écrivez-nous à : 
+        <a href="mailto:contact@mathpro.com">contact@mathpro.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MathPro. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
