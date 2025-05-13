@@ -2,51 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cristiano Ronaldo - Site Officiel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actualités Express</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="overlay">
-      <h1>Cristiano Ronaldo</h1>
-      <p>Le GOAT du football mondial</p>
+    <div class="container">
+      <h1>Actualités Express</h1>
+      <p>Toutes les nouvelles en temps réel</p>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#actus">Actualités</a></li>
+        <li><a href="#categorie">Catégories</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#bio">Biographie</a></li>
-      <li><a href="#galerie">Galerie</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="bio">
-      <h2>Biographie</h2>
-      <p>
-        Cristiano Ronaldo dos Santos Aveiro est un footballeur professionnel portugais, considéré comme l'un des plus grands joueurs de tous les temps. Il a joué pour des clubs prestigieux tels que Manchester United, le Real Madrid, la Juventus et Al-Nassr.
-      </p>
+  <main class="container">
+    <section id="accueil">
+      <h2>Bienvenue sur votre plateforme d'actualités</h2>
+      <p>Nous vous offrons les dernières nouvelles nationales et internationales, culturelles, sportives, économiques et bien plus.</p>
     </section>
 
-    <section id="galerie">
-      <h2>Galerie</h2>
-      <div class="gallery">
-        <img src="images/ronaldo1.jpg" alt="Ronaldo en action 1" />
-        <img src="images/ronaldo2.jpg" alt="Ronaldo en action 2" />
-        <img src="images/ronaldo3.jpg" alt="Ronaldo en action 3" />
-      </div>
+    <section id="actus">
+      <h2>Dernières Actualités</h2>
+      <article class="news">
+        <h3>⚽ Victoire historique de l'équipe nationale !</h3>
+        <p><small>Publié le 13 mai 2025</small></p>
+        <p>L'équipe a remporté un match décisif dans les qualifications pour la Coupe du Monde.</p>
+      </article>
+      <article class="news">
+        <h3>📈 L'économie reprend de la vigueur au 2e trimestre</h3>
+        <p><small>Publié le 13 mai 2025</small></p>
+        <p>Les derniers chiffres indiquent une croissance de 3,2% du PIB au second trimestre.</p>
+      </article>
+    </section>
+
+    <section id="categorie">
+      <h2>Catégories Populaires</h2>
+      <ul class="categories">
+        <li><a href="#">Politique</a></li>
+        <li><a href="#">Économie</a></li>
+        <li><a href="#">Sport</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Technologie</a></li>
+      </ul>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Pour toute demande, veuillez envoyer un e-mail à : <a href="mailto:contact@cristianoronaldo.com">contact@cristianoronaldo.com</a></p>
+      <h2>Contactez-nous</h2>
+      <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required />
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Cristiano Ronaldo. Tous droits réservés.</p>
+    <p>&copy; 2025 Actualités Express. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
