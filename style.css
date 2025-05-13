@@ -1,3 +1,97 @@
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #e6f0ff;
+    border-bottom: 2px solid #cce;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #003366;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Navigation */
+nav {
+    background-color: #003366;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #005599;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0077cc;
+}
+
+/* Sections */
+main section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f8f8ff;
+    border-left: 4px solid #005599;
+    border-radius: 5px;
+}
+
+main h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin-top: 40px;
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /* Base */
 * {
     margin: 0;
