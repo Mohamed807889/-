@@ -2,76 +2,132 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actualités Express</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBC News - Accueil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #000;
+    }
+
+    header {
+      background-color: #bb1919;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .headline {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 6px solid #bb1919;
+    }
+
+    .headline h2 {
+      margin-top: 0;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .article {
+      background-color: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
+
+    .article img {
+      width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ddd;
+      padding: 15px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>📰 Actualités Express</h1>
-      <p>Les infos du jour, en un clin d'œil</p>
-    </div>
+    <h1>BBC News</h1>
     <nav>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#actus">Actualités</a></li>
-        <li><a href="#categorie">Catégories</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#">Accueil</a>
+      <a href="#">Monde</a>
+      <a href="#">Politique</a>
+      <a href="#">Économie</a>
+      <a href="#">Science</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section id="accueil">
-      <h2>Bienvenue</h2>
-      <p>Retrouvez les dernières nouvelles nationales et internationales sur notre plateforme actualisée en temps réel.</p>
-    </section>
+  <div class="container">
+    <div class="headline">
+      <h2>Titre principal de l'actualité</h2>
+      <p>Résumé de l'article principal avec les faits saillants du jour. Cliquez ici pour en savoir plus.</p>
+    </div>
 
-    <section id="actus">
-      <h2>🗞️ Dernières Actualités</h2>
-      <article class="news">
-        <h3>⚽ Victoire historique de l'équipe nationale</h3>
-        <p class="date">13 mai 2025</p>
-        <p>Un match décisif remporté pour les qualifications de la Coupe du Monde.</p>
-      </article>
-      <article class="news">
-        <h3>📈 Croissance économique confirmée</h3>
-        <p class="date">13 mai 2025</p>
-        <p>Le PIB progresse de 3,2% au second trimestre selon les derniers chiffres.</p>
-      </article>
-    </section>
+    <div class="articles">
+      <div class="article">
+        <img src="https://via.placeholder.com/300x180" alt="News 1">
+        <h3>Sous-titre de l'article</h3>
+        <p>Petit résumé du contenu de l'article ici.</p>
+      </div>
 
-    <section id="categorie">
-      <h2>🔎 Catégories</h2>
-      <ul class="categories">
-        <li><a href="#">Politique</a></li>
-        <li><a href="#">Économie</a></li>
-        <li><a href="#">Sport</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">Technologie</a></li>
-      </ul>
-    </section>
+      <div class="article">
+        <img src="https://via.placeholder.com/300x180" alt="News 2">
+        <h3>Autre article important</h3>
+        <p>Résumé court et pertinent pour inciter à la lecture.</p>
+      </div>
 
-    <section id="contact">
-      <h2>✉️ Contact</h2>
-      <form>
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required />
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Envoyer</button>
-      </form>
-    </section>
-  </main>
+      <div class="article">
+        <img src="https://via.placeholder.com/300x180" alt="News 3">
+        <h3>Rubrique Science</h3>
+        <p>Les dernières découvertes et recherches scientifiques.</p>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Actualités Express — Tous droits réservés</p>
+    &copy; 2025 BBC News (réplique éducative) - Projet HTML/CSS
   </footer>
 </body>
 </html>
