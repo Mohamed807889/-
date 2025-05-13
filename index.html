@@ -3,16 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BBC News Clone</title>
+  <title>Akhbar Now</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #bb1919;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background-color: #e2e2e2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .slider {
+      font-size: 20px;
+      font-weight: bold;
+      animation: slide 10s infinite;
+    }
+
+    @keyframes slide {
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      30% {opacity: 1;}
+      40% {opacity: 0;}
+      100% {opacity: 0;}
+    }
+
+    .main-content {
+      padding: 20px;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #bb1919;
+    }
+
+    .card p {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
     <div class="logo">
-      <!-- إضافة الشعار كصورة -->
-      <img src="https://via.placeholder.com/50x50" alt="Logo BBC" class="logo-img">
-      <!-- إضافة اسم الموقع -->
-      <span class="logo-text">Akhbar24 NEWS</span>
+      <img src="https://via.placeholder.com/50x50" alt="Logo Akhbar Now" class="logo-img">
+      <span class="logo-text">Akhbar Now</span>
     </div>
     <nav class="nav">
       <a href="#">Accueil</a>
@@ -25,9 +134,7 @@
 
   <section class="hero">
     <div class="slider">
-      <div class="slide active">Breaking: Nouvelle actualité mondiale...</div>
-      <div class="slide">Politique: Réformes à venir en Europe...</div>
-      <div class="slide">Climat: Alertes dans plusieurs pays...</div>
+      Flash: Dernières nouvelles du monde en temps réel...
     </div>
   </section>
 
@@ -35,26 +142,24 @@
     <section class="articles">
       <article class="card">
         <img src="https://via.placeholder.com/400x200" alt="news">
-        <h3>Économie mondiale en mutation</h3>
-        <p>Les grandes tendances du marché en 2025...</p>
+        <h3>Tensions économiques mondiales</h3>
+        <p>Les marchés en alerte face aux changements géopolitiques...</p>
       </article>
       <article class="card">
         <img src="https://via.placeholder.com/400x200" alt="news">
-        <h3>Intelligence artificielle : révolution ou menace ?</h3>
-        <p>L'impact croissant de l'IA sur nos vies...</p>
+        <h3>Technologie: l'IA au cœur des débats</h3>
+        <p>Comment l'intelligence artificielle transforme nos sociétés...</p>
       </article>
       <article class="card">
         <img src="https://via.placeholder.com/400x200" alt="news">
-        <h3>Sport : la surprise du championnat</h3>
-        <p>Retour sur les moments forts du week-end...</p>
+        <h3>Sport: victoire historique ce soir</h3>
+        <p>Un match qui restera gravé dans les mémoires...</p>
       </article>
     </section>
   </main>
 
   <footer class="footer">
-    &copy; 2025 - BBC News Clone. Tous droits réservés.
+    &copy; 2025 - Akhbar Now. Tous droits réservés.
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
