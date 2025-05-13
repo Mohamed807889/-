@@ -1,141 +1,133 @@
-/* Général */
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f5f5f5;
-  color: #222;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBC News - Accueil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #000;
+    }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    header {
+      background-color: #bb1919;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-}
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin-top: 15px;
-  list-style: none;
-  flex-wrap: wrap;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
 
-nav ul li {
-  margin: 0 15px;
-}
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .headline {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 6px solid #bb1919;
+    }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
+    .headline h2 {
+      margin-top: 0;
+    }
 
-/* Sections */
-section {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
 
-h2 {
-  color: #444;
-  margin-bottom: 15px;
-}
+    .article {
+      background-color: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+    }
 
-.news {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-}
+    .article img {
+      width: 100%;
+      height: auto;
+    }
 
-.news:last-child {
-  border-bottom: none;
-}
+    footer {
+      background-color: #222;
+      color: #ddd;
+      padding: 15px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
 
-.date {
-  color: #888;
-  font-size: 0.9em;
-}
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-/* Catégories */
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0;
-  list-style: none;
-}
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BBC News</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Monde</a>
+      <a href="#">Politique</a>
+      <a href="#">Économie</a>
+      <a href="#">Science</a>
+    </nav>
+  </header>
 
-.categories li a {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #ddd;
-  border-radius: 20px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s;
-}
+  <div class="container">
+    <div class="headline">
+      <h2>Titre principal de l'actualité</h2>
+      <p>Résumé de l'article principal avec les faits saillants du jour. Cliquez ici pour en savoir plus.</p>
+    </div>
 
-.categories li a:hover {
-  background-color: #bbb;
-}
+    <div class="articles">
+      <div class="article">
+        <img src="https://via.placeholder.com/300x180" alt="News 1">
+        <h3>Sous-titre de l'article</h3>
+        <p>Petit résumé du contenu de l'article ici.</p>
+      </div>
 
-/* Formulaire */
-form {
-  display: flex;
-  flex-direction: column;
-}
+      <div class="article">
+        <img src="https://via.placeholder.com/300x180" alt="News 2">
+        <h3>Autre article important</h3>
+        <p>Résumé court et pertinent pour inciter à la lecture.</p>
+      </div>
 
-form input, form textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+      <div class="article">
+        <img src="https://via.placeholder.com/300x180" alt="News 3">
+        <h3>Rubrique Science</h3>
+        <p>Les dernières découvertes et recherches scientifiques.</p>
+      </div>
+    </div>
+  </div>
 
-form button {
-  padding: 10px;
-  background-color: #222;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #444;
-}
-
-/* Pied de page */
-footer {
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  .categories {
-    flex-direction: column;
-  }
-}
+  <footer>
+    &copy; 2025 BBC News (réplique éducative) - Projet HTML/CSS
+  </footer>
+</body>
+</html>
