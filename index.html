@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,6 +8,7 @@
 </head>
 <body>
 
+    <!-- En-tête avec menu -->
     <header>
         <div class="container">
             <h1>MathPro</h1>
@@ -18,40 +16,38 @@
         </div>
         <nav>
             <ul>
-                <section id="pdf">
-    <h2>Document PDF à consulter</h2>
-    <p>Vous pouvez lire ou télécharger ce document :</p>
-    
-    <!-- Bouton pour ouvrir -->
-    <a href="documents/ee.pdf" target="_blank" class="btn-pdf">📄 Lire le PDF</a>
-
-    <!-- Bouton pour télécharger -->
-    <a href="documents/ee.pdf" download class="btn-download">⬇️ Télécharger le PDF</a>
-</section>
-
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#pdf">Cours (PDF)</a></li>
+                <li><a href="#exercices">Exercices</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Contenu principal -->
     <main class="container">
+
         <section id="accueil">
             <h2>Bienvenue sur MathPro</h2>
             <p>Ce site propose des cours, des fiches de révision, des exercices corrigés et des outils pour progresser en mathématiques.</p>
         </section>
 
-        <section id="cours">
-            <h2>Cours disponibles</h2>
-            <ul>
-                <li>Algèbre – équations, identités remarquables, polynômes...</li>
-                <li>Analyse – limites, dérivées, intégrales...</li>
-                <li>Géométrie – vecteurs, trigonométrie, cercles...</li>
-                <li>Probabilités & Statistiques</li>
-            </ul>
+        <!-- Section PDF -->
+        <section id="pdf">
+            <h2>Document PDF à consulter</h2>
+            <p>Vous pouvez lire ou télécharger ce document :</p>
+
+            <!-- Bouton pour ouvrir -->
+            <a href="documents/ee.pdf" target="_blank" class="btn-pdf">📄 Lire le PDF</a>
+
+            <!-- Bouton pour télécharger -->
+            <a href="documents/ee.pdf" download class="btn-download">⬇️ Télécharger le PDF</a>
         </section>
 
+        <!-- Autres contenus -->
         <section id="exercices">
             <h2>Exercices corrigés</h2>
-            <p>Des centaines d'exercices pour vous entraîner :</p>
             <ul>
                 <li><strong>Niveau collège</strong> : fractions, proportionnalité, calcul littéral...</li>
                 <li><strong>Niveau lycée</strong> : fonctions, suites, statistiques...</li>
@@ -66,80 +62,13 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Une question ? Une remarque ? Écrivez-nous à : <a href="mailto:contact@mathpro.com">contact@mathpro.com</a></p>
+            <p>Une question ? Une remarque ? Écrivez-nous à : 
+                <a href="mailto:contact@mathpro.com">contact@mathpro.com</a>
+            </p>
         </section>
+
     </main>
 
+    <!-- Pied de page -->
     <footer>
-        <p>&copy; 2025 MathPro. Site éducatif libre et gratuit.</p>
-    </footer>
-
-</body>
-</html>
-
-
-<section id="pdf">
-    <h2>Document PDF à consulter</h2>
-    <p>Vous pouvez lire ou télécharger ce document :</p>
-    
-    <!-- Bouton pour ouvrir -->
-    <a href="documents/ee.pdf" target="_blank" class="btn-pdf">📄 Lire le PDF</a>
-
-    <!-- Bouton pour télécharger -->
-    <a href="documents/ee.pdf" download class="btn-download">⬇️ Télécharger le PDF</a>
-</section>
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css"> <!-- link to the CSS file -->
-</head>
-<body>
-    <header>
-        <h1>شهيوات بلادي</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <h2>Welcome to My Site</h2>
-        <p>This is an example of a simple website using HTML and CSS.</p>
-    </section>
-
-    
-
-<section style="text-align: center;">
-  <h2>Voici une image</h2>
-  <img src="الطبخ.jpg" width="160" alt="فن الطبخ المغربي">
-</section>
-    
-    <section id="الطبخ">
-        <h2>الطبخ</h2>
-        <p>This site was created to demonstrate GitHub Pages.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can contact me by email at example@mail.com</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 شهيوات بلادي.</p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2025 MathPro. Site éducatif libre
