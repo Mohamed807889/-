@@ -1,133 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BBC News - Accueil</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #000;
-    }
-
-    header {
-      background-color: #bb1919;
-      padding: 10px 20px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .headline {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 6px solid #bb1919;
-    }
-
-    .headline h2 {
-      margin-top: 0;
-    }
-
-    .articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .article {
-      background-color: white;
-      padding: 15px;
-      border: 1px solid #ccc;
-    }
-
-    .article img {
-      width: 100%;
-      height: auto;
-    }
-
-    footer {
-      background-color: #222;
-      color: #ddd;
-      padding: 15px 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BBC News Clone</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>BBC News</h1>
-    <nav>
+  <header class="header">
+    <div class="logo">BBC NEWS</div>
+    <nav class="nav">
       <a href="#">Accueil</a>
       <a href="#">Monde</a>
-      <a href="#">Politique</a>
       <a href="#">Économie</a>
-      <a href="#">Science</a>
+      <a href="#">Culture</a>
+      <a href="#">Sport</a>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="headline">
-      <h2>Titre principal de l'actualité</h2>
-      <p>Résumé de l'article principal avec les faits saillants du jour. Cliquez ici pour en savoir plus.</p>
+  <section class="hero">
+    <div class="slider">
+      <div class="slide active">Breaking: Nouvelle actualité mondiale...</div>
+      <div class="slide">Politique: Réformes à venir en Europe...</div>
+      <div class="slide">Climat: Alertes dans plusieurs pays...</div>
     </div>
+  </section>
 
-    <div class="articles">
-      <div class="article">
-        <img src="https://via.placeholder.com/300x180" alt="News 1">
-        <h3>Sous-titre de l'article</h3>
-        <p>Petit résumé du contenu de l'article ici.</p>
-      </div>
+  <main class="main-content">
+    <section class="articles">
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200" alt="news">
+        <h3>Économie mondiale en mutation</h3>
+        <p>Les grandes tendances du marché en 2025...</p>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200" alt="news">
+        <h3>Intelligence artificielle : révolution ou menace ?</h3>
+        <p>L'impact croissant de l'IA sur nos vies...</p>
+      </article>
+      <article class="card">
+        <img src="https://via.placeholder.com/400x200" alt="news">
+        <h3>Sport : la surprise du championnat</h3>
+        <p>Retour sur les moments forts du week-end...</p>
+      </article>
+    </section>
+  </main>
 
-      <div class="article">
-        <img src="https://via.placeholder.com/300x180" alt="News 2">
-        <h3>Autre article important</h3>
-        <p>Résumé court et pertinent pour inciter à la lecture.</p>
-      </div>
-
-      <div class="article">
-        <img src="https://via.placeholder.com/300x180" alt="News 3">
-        <h3>Rubrique Science</h3>
-        <p>Les dernières découvertes et recherches scientifiques.</p>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 BBC News (réplique éducative) - Projet HTML/CSS
+  <footer class="footer">
+    &copy; 2025 - BBC News Clone. Tous droits réservés.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
