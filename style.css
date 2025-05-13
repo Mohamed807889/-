@@ -106,6 +106,40 @@ footer {
     margin-top: 40px;
 }
 
+
+.btn-pdf,
+.btn-download {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-pdf {
+    background-color: #005599;
+}
+
+.btn-pdf:hover {
+    background-color: #003f77;
+}
+
+.btn-download {
+    background-color: #cc0000;
+}
+
+.btn-download:hover {
+    background-color: #a30000;
+}
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 }
