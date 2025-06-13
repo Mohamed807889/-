@@ -6,6 +6,7 @@
   <title>Akhbar Now</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    /* --- Reset et bases --- */
     * {
       margin: 0;
       padding: 0;
@@ -18,6 +19,7 @@
       color: #333;
     }
 
+    /* --- En-tête --- */
     .header {
       display: flex;
       justify-content: space-between;
@@ -54,6 +56,7 @@
       text-decoration: underline;
     }
 
+    /* --- Bandeau défilant / Slider --- */
     .hero {
       background-color: #e2e2e2;
       padding: 20px;
@@ -67,13 +70,12 @@
     }
 
     @keyframes slide {
-      0% {opacity: 0;}
-      10% {opacity: 1;}
-      30% {opacity: 1;}
+      0%, 100% {opacity: 0;}
+      10%, 30% {opacity: 1;}
       40% {opacity: 0;}
-      100% {opacity: 0;}
     }
 
+    /* --- Contenu principal --- */
     .main-content {
       padding: 20px;
     }
@@ -108,6 +110,7 @@
       color: #555;
     }
 
+    /* --- Pied de page --- */
     .footer {
       background-color: #222;
       color: white;
@@ -118,6 +121,8 @@
   </style>
 </head>
 <body>
+
+  <!-- En-tête -->
   <header class="header">
     <div class="logo">
       <img src="https://via.placeholder.com/50x50" alt="Logo Akhbar Now" class="logo-img">
@@ -132,34 +137,57 @@
     </nav>
   </header>
 
+  <!-- Bandeau Flash Info -->
   <section class="hero">
-    <div class="slider">
+    <div class="slider" id="sliderText">
       Flash: Dernières nouvelles du monde en temps réel...
     </div>
   </section>
 
+  <!-- Contenu principal -->
   <main class="main-content">
+
+    <!-- Articles -->
     <section class="articles">
       <article class="card">
         <img src="https://via.placeholder.com/400x200" alt="news">
         <h3>Tensions économiques mondiales</h3>
         <p>Les marchés en alerte face aux changements géopolitiques...</p>
       </article>
+
       <article class="card">
         <img src="https://via.placeholder.com/400x200" alt="news">
         <h3>Technologie: l'IA au cœur des débats</h3>
         <p>Comment l'intelligence artificielle transforme nos sociétés...</p>
       </article>
+
       <article class="card">
         <img src="https://via.placeholder.com/400x200" alt="news">
         <h3>Sport: victoire historique ce soir</h3>
         <p>Un match qui restera gravé dans les mémoires...</p>
       </article>
     </section>
+
   </main>
 
+  <!-- Pied de page -->
   <footer class="footer">
     &copy; 2025 - Akhbar Now. Tous droits réservés.
   </footer>
+
+  <!-- Script pour slider dynamique -->
+  <script>
+    const textes = [
+      "Flash: Dernières nouvelles du monde en temps réel...",
+      "Urgent: Conférence de presse du ministre à 19h...",
+      "Breaking: Nouveaux chiffres économiques dévoilés..."
+    ];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % textes.length;
+      document.getElementById("sliderText").innerText = textes[index];
+    }, 5000);
+  </script>
+
 </body>
 </html>
